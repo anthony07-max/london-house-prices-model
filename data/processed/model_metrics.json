@@ -1,0 +1,86 @@
+{
+  "features": [
+    "property_type",
+    "tenure",
+    "borough",
+    "postcode_district",
+    "new_build",
+    "months_since_start"
+  ],
+  "categorical": [
+    "property_type",
+    "tenure",
+    "borough",
+    "postcode_district"
+  ],
+  "start": "2023-01-01",
+  "test_from": "2025-07-01",
+  "train_rows": 204414,
+  "test_rows": 74788,
+  "rows_dropped_below_min_price": 6,
+  "min_price": 25000,
+  "best_iteration": 164,
+  "train_period": "01 Jan 2023 to 30 Jun 2025",
+  "test_period": "01 Jul 2025 to 28 Aug 2026",
+  "latest_months_since_start": 43.87,
+  "metrics": {
+    "model": {
+      "mae_gbp": 194530,
+      "median_abs_error_gbp": 95498,
+      "median_ape_pct": 18.2,
+      "mape_pct": 27.1,
+      "within_10pct": 29.8,
+      "within_20pct": 53.7,
+      "r2_log": 0.632
+    },
+    "baseline_borough_type_median": {
+      "mae_gbp": 229499,
+      "median_abs_error_gbp": 116196,
+      "median_ape_pct": 22.3,
+      "mape_pct": 32.1,
+      "within_10pct": 24.4,
+      "within_20pct": 45.9,
+      "r2_log": 0.503
+    }
+  },
+  "effects": {
+    "property_type": {
+      "Detached": 47.0,
+      "Flat/maisonette": -8.3,
+      "Semi-detached": 15.7,
+      "Terraced": 1.4
+    },
+    "tenure": {
+      "Freehold": 23.9,
+      "Leasehold": -16.3
+    },
+    "new_build_vs_resale_pct": 28.8
+  },
+  "best_borough_mape": {
+    "borough": "Barking and Dagenham",
+    "median_ape_pct": 10.2
+  },
+  "worst_borough_mape": {
+    "borough": "Kensington and Chelsea",
+    "median_ape_pct": 40.9
+  },
+  "boroughs_model_beats_baseline": 33,
+  "importance_gain_pct": {
+    "postcode_district": 50.0,
+    "borough": 17.2,
+    "tenure": 15.4,
+    "property_type": 10.3,
+    "new_build": 3.6,
+    "months_since_start": 3.5
+  },
+  "borough_effect_top": {
+    "Kensington and Chelsea": 42.7,
+    "City of Westminster": 37.9,
+    "Camden": 19.9
+  },
+  "borough_effect_bottom": {
+    "Sutton": -14.8,
+    "Newham": -13.9,
+    "Bexley": -13.5
+  }
+}

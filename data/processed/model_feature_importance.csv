@@ -1,0 +1,7 @@
+,gain_share_pct,mean_abs_shap_log
+borough,17.2,0.1228
+months_since_start,3.5,0.013
+new_build,3.6,0.0244
+postcode_district,50.0,0.2113
+property_type,10.3,0.0906
+tenure,15.4,0.1959
